@@ -1,0 +1,19 @@
+#include <stdio.h>
+void count_cd(char buffer[]){
+  char *point=buffer;
+  int counter=0;
+  do{
+    if ((*point=='c')&&(*(point+1)=='d')){
+      counter++;
+    }
+    point++;
+  } while (*point!='\0');
+  printf("%s" "%d","The number of occurrences of 'cd':", counter);
+}
+int main(void) {
+  char buffer [2048];
+  gets(buffer);
+  count_cd(buffer);
+  return 0;
+
+}
